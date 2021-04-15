@@ -3,12 +3,13 @@ const express = require('express');
 
 const server = express();
 
+const users = ['Gabrielle', 'Emanoela', 'Eduardo'];
 
-server.get('/users/:id', (req, res) => {
+server.get('/users/:index', (req, res) => {
 
-    const id = req.params.id;
+    const { index } = req.params;
 
-    return res.json({ message: `Buscando o usuário ${id}` });
+    return res.json(users[index]);
 });
-
+ 
 server.listen(3005);
