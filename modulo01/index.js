@@ -4,11 +4,11 @@ const express = require('express');
 const server = express();
 
 
-server.get('/teste', (req, res) => {
+server.get('/users/:id', (req, res) => {
 
-    const nome = req.query.nome;
+    const id = req.params.id;
 
-    return res.json({ message: `Hello ${nome}` });
+    return res.json({ message: `Buscando o usuário ${id}` });
 });
 
-server.listen(3000);
+server.listen(3005);
