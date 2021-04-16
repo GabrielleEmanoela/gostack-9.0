@@ -25,12 +25,18 @@ server.post('/users', (req, res) => {
 
 });
 
-server.put('/users/:index',(req, res)=>{
-    const {index}= req.params;
-    const {name} = req.body; ///Sobrepor Informação. 
-    users[index]= name;
+server.put('/users/:index', (req, res) => {
+    const { index } = req.params;
+    const { name } = req.body; 
+    users[index] = name;
 
     return res.json(users);
-})
+});
+
+server.delete('/users/:index', (req, res) => {
+    const { index } = req.params; 
+    users.splice(index, 1) 
+    return res.send(); 
+});
 
 server.listen(3005);
