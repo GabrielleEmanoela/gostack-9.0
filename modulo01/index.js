@@ -16,7 +16,7 @@ server.get('/users/:index', (req, res) => {
 server.get('/users', (req, res) => {
     return res.json(users);
 });
-//Usando Request Body.
+
 server.post('/users', (req, res) => {
     const name = req.body;
 
@@ -24,5 +24,13 @@ server.post('/users', (req, res) => {
     return res.json(users)
 
 });
+
+server.put('/users/:index',(req, res)=>{
+    const {index}= req.params;
+    const {name} = req.body; ///Sobrepor Informação. 
+    users[index]= name;
+
+    return res.json(users);
+})
 
 server.listen(3005);
