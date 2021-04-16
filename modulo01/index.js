@@ -11,5 +11,9 @@ server.get('/users/:index', (req, res) => {
 
     return res.json(users[index]);
 });
- 
+
+server.get('/users', (req, res) => {
+    return res.json(users);
+});
+
 server.listen(3005);
