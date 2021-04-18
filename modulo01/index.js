@@ -6,10 +6,14 @@ server.use(express.json());
 
 const users = ['Gabrielle', 'Emanoela', 'Eduardo'];
 
-server.use((req, res,next) => {
+server.use((req, res, next) => {
+    console.time('Request');
     console.log(`Método ${req.method}; URL: ${req.url}`);
 
-    return next();
+    next();
+
+    console.timeEnd('Request')
+
 });
 
 
