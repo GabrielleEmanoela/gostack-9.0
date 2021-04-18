@@ -16,6 +16,14 @@ server.use((req, res, next) => {
 
 });
 
+function checkUserExists(res, res, next) {
+    if (!req.body.name) {
+        return res.status(400).json({ error: 'User name is required' })
+    }
+
+    return next;
+
+}
 
 server.get('/users/:index', (req, res) => {
 
