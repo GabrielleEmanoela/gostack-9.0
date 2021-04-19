@@ -17,8 +17,8 @@ function checkUserExists(req, res, next) {
     if (!req.body.name) {
         return res.status(400).json({ error: 'User name is required' })
     }
-    req.user = user;
-    return next;
+    req.users = users;         
+    return next;   
 }
 
 function checkUserInArray(req, res, next) {
