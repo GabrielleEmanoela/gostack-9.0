@@ -153,6 +153,9 @@ RNTester/Pods/*
 /ReactCommon/fabric/components/rncore/
 /schema-rncore.json
 
+
+temp/
+
 ### yarn ###
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
 
@@ -168,3 +171,5 @@ RNTester/Pods/*
 
 # and uncomment the following lines
 # .pnp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/yarn,node
