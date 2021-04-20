@@ -1,5 +1,5 @@
 //importando apenas o router
-const { Router } = require('express');
+import { Router }  from 'express' ;
 const routes = new Router();
 
 
@@ -7,4 +7,4 @@ const routes = new Router();
 routes.get('/', (req, res) => {
     return res.json({ message: 'Hello world' })
 })
-module.exports = routes; //exportando minhas rotas.
+export default  routes; //exportando minhas rotas.
