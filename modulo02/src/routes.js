@@ -9,7 +9,7 @@ routes.get('/', async (req, res) => {
     password_hash: '12345678',
   });
 
-  return res.json(user);
+  return res.json({ message: 'Hello world' });
 });
 
 export default routes;
