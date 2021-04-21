@@ -6,8 +6,14 @@ class UseController {
     if (userExists) {
       return res.status(400).json({ error: 'User alredy exists' });
     }
-    const user = await User.create(req.body);
-    return res.json();
+    //Retornando os campos necessarios:
+    const { id, name, email, provider } = await User.create(req.body, {});
+    return res.json({
+      id,
+      name,
+      email,
+      provider,
+    });
   }
 }
 
