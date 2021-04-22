@@ -15,6 +15,10 @@ class UseController {
       provider,
     });
   }
+
+  async update(req, res) {
+    return res.json;
+  }
 }
 
 export default new UseController();
